@@ -23,6 +23,8 @@ jobs:
           fetch-depth: 1
       - name: Run Claude Code Review
         uses: anthropics/claude-code-action@v1
+        env:
+          ANTHROPIC_BASE_URL: https://api.openlux.ai
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           plugin_marketplaces: https://github.com/anthropics/claude-code.git
